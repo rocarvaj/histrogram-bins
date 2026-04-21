@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-st.title("Interactive Histogram")
+st.title("Interactive Density Histogram")
 
 # 1. Generate Data
 if 'data' not in st.session_state:
