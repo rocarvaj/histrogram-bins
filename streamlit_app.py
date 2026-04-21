@@ -11,12 +11,12 @@ if 'data' not in st.session_state:
 data = st.session_state.data
 
 # 2. Sidebar Slider
-bin_count = st.sidebar.slider("Number of bins:", 5, 100, 30)
+bin_count = st.slider("Number of bins:", 5, 100, 30)
 
 # 3. Calculate Histogram with Numpy
 # counts: the number of items in each bin
 # bin_edges: the numerical boundaries of the bins
-counts, bin_edges = np.histogram(data, bins=bin_count)
+counts, bin_edges = np.histogram(data, bins=bin_count, density = True)
 
 # 4. Prepare data for st.bar_chart
 # We use the bin centers as labels for a cleaner look
